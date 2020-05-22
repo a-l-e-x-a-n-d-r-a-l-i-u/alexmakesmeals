@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import NavBar from './NavBar.js';
+import About from './components/About.js';
+import Explore from './components/Explore.js';
+import Contact from './components/Contact.js';
+import Error from './components/Error.js';
+
+import './App.css';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return (<>
+          <NavBar pages={pages} />
+        <BrowserRouter>
+          <div>
+            <Switch>
+              <Route path="/" component={About} exact />
+              <Route path="/about" component={About} />
+              <Route path="/explore" component={Explore} />
+              <Route path="/contact" component={Contact} />
+              <Route component={Error} />
+            </Switch>
+          </div>
+        </BrowserRouter>
+    </>);
 }
 
 export default App;
