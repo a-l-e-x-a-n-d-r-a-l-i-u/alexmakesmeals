@@ -1,16 +1,12 @@
 import React from 'react';
-import FooterSection from '../FooterSection';
 
 const Error = () => {
     return (
-        <div>
         <section id="section1">
             <div>
-                <p className="container">u dun gon goofd it: path does not exist</p>
+                <p className="container">Oops! This page went missing</p>
             </div>
         </section>
-        <FooterSection />
-        </div>
     );
 };
 
