@@ -262,7 +262,7 @@ nav {
   background-color: #ffffff;
   width: 100vw;
   overflow: auto;
-  position: fixed;
+  position: sticky;
   top: 0px;
 }
 

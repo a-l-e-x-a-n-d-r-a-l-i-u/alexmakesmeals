@@ -1,6 +1,6 @@
 import React from 'react';
-import KaelanPortraitCropped from '../images/KaelanPortraitCropped.jpg';
-const KaelanBg = { backgroundImage: 'url(' + KaelanPortraitCropped + ')' };
+import KaelanPortrait from '../images/KaelanPortraitCropped.png';
+const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')' };
 
 
 class HeroSection extends React.Component {
