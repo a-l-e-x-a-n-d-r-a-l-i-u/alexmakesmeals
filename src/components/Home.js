@@ -1,4 +1,7 @@
 import React from 'react';
+import KaelanPortraitCropped from '../images/KaelanPortraitCropped.jpg';
+const KaelanBg = { backgroundImage: 'url(' + KaelanPortraitCropped + ')' };
+
 
 class HeroSection extends React.Component {
     render() {
@@ -88,7 +91,7 @@ class ThankYouSponsorsSection extends React.Component {
 
 const Home = () => {
     return (<>
-        <section id="section1"><HeroSection /></section>
+        <section id="section1" className="has-bg-img" style={KaelanBg}><HeroSection /></section>
         <section id="section-white-bg"><ImpactStatsSection /></section>
         <section id="section-green-bg"><ImpactCaseStudySection /></section>
         <section id="section-white-bg"><ThankYouSponsorsSection /></section>
