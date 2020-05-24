@@ -23,7 +23,6 @@ class ImpactStatsSection extends React.Component {
         return (
             <div className="container">
                 <h2>Our Impact</h2>
-                <div className="mockup">
                     <div className="flex-three-grid">
                         <div className="flex-three-container">
                             <img src="" alt="# Number" />
@@ -40,7 +39,6 @@ class ImpactStatsSection extends React.Component {
                     </div>
                     <p>We are active in <b>3 states</b> with <b># restaurants</b> on board.</p>
                     <a href="/donation">How you can get involved</a>
-                </div>
             </div>
         )
     }
@@ -89,12 +87,62 @@ class ThankYouSponsorsSection extends React.Component {
     }
 }
 
+class CorporateContactSection extends React.Component {
+    render() {
+        return (
+            <div className="container">
+                <h2>Make a difference. Partner with us</h2>
+                <div className="flex-three-grid">
+                    <div className="feature-container">
+                        <div className="feature-content">
+                            <p>Corporate partnerships will enable us to XXXXXXYYYYZZZZZ.</p>
+                        </div>
+                    </div>
+                    <div className="feature-container">
+                        <div className="feature-content">
+                            <form>Contact form here</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+class NewsFeaturesSection extends React.Component {
+    render() {
+        return (
+            <div className="container">
+                <h2>As featured on</h2>
+                    <div className="flex-three-grid">
+                        <div className="flex-three-container">
+                            <img src="" alt="Sunrise Logo" />
+                            <h3 className="legend-header">Headline 1</h3>
+                        </div>
+                        <div className="flex-three-container">
+                            <img src="" alt="ABC" />
+                            <h3 className="legend-header">Headline 2</h3>
+                        </div>
+                        <div className="flex-three-container">
+                            <img src="" alt="The Age" />
+                            <h3 className="legend-header">Headline 3</h3>
+                        </div>
+                    </div>
+                    <a href="/news">Read more about us in the news</a>
+                </div>
+            </div>
+        )
+    }
+}
+
 const Home = () => {
     return (<>
         <section id="section1" className="has-bg-img" style={KaelanBg}><HeroSection /></section>
         <section id="section-white-bg"><ImpactStatsSection /></section>
         <section id="section-green-bg"><ImpactCaseStudySection /></section>
         <section id="section-white-bg"><ThankYouSponsorsSection /></section>
+        <section id="section-green-bg"><CorporateContactSection /></section>
+        <section id="section-white-bg"><NewsFeatureSection /></section>
     </>)
 };
 
