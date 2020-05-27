@@ -65,8 +65,8 @@ h6 { font-size: 1rem; line-height: 1.66667rem; }
 form { display: block; }
 #landing-blurb { padding-top: 1.333rem; }
 #section1 { padding-top: 4rem; padding-bottom: 4rem; }
-#section-green-bg { background-color: #7ac143; padding-top: 6.667rem; padding-bottom: 6.667rem; color: #ffffff }
-#section-white-bg { background-color: #ffffff; padding-top: 6.667rem; padding-bottom: 6.667rem; }
+#section-alternate-bg { background-color: #C5D6D8; padding-top: 6.667rem; padding-bottom: 6.667rem; color: #0D1B2A }
+#section-plain-bg { background-color: #F1FFE7; padding-top: 6.667rem; padding-bottom: 6.667rem; }
 #footer { padding-top: 4.444rem; padding-bottom: 4.444rem; background-color: #E1E6E1; }
 .footer-socials { text-align: center }
 
@@ -79,6 +79,7 @@ audio,video { max-width: 100%; }
   border: 5px solid #7ac143;
   padding: 5px;
   text-align: center; }
+
 .button-priority {
   background: #7ac143; }
 
@@ -287,5 +288,5 @@ ul.nav-header {
 }
 
 .nav-header li a:hover {
-  background-color: rgb(255, 35, 90);
+  background-color: #A9FDAC;
 }
