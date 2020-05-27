@@ -4,8 +4,8 @@ import logo from './logo-300px.png';
 export default class NavBar extends React.Component {
   render() {
     let navMarkup = this.props.pages.map((page, index) => {
-      let navLinkMarkup = page.active ? (
-        <div className='nav-link'><h5><a className='nav-link-active' href={page.page}>{page.label}</a></h5></div>
+      let navLinkMarkup = page.priority ? (
+        <div className='nav-link-cta'><a href={page.page}><h5>{page.label}</h5></a></div>
       ) : (
         <div className='nav-link'><h5><a href={page.page}>{page.label}</a></h5></div>
         );

@@ -1,7 +1,7 @@
 import React from 'react';
+import CountUp from 'react-countup';
 import KaelanPortrait from '../images/KaelanPortraitCropped.png';
 const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')' };
-
 
 class HeroSection extends React.Component {
     render() {
@@ -9,10 +9,10 @@ class HeroSection extends React.Component {
             <div className="large">
                 <div className="hero-container">
                     <h1>Help to feed frontline workers – those who take care of you and your loved ones.</h1>
-                    <div id="landing-blurb">
                         <h2>Support all medical and ancillary professionals at the frontline of the COVID-19 pandemic.</h2>
-                        <a href="/donate"><div className="button button-priority"><h4>Make A Donation</h4></div></a>
-                        <a href="/partners"><div className="button"><h4>Corporates</h4></div></a>
+                        <div className="buttons-container">
+                        <div className="button button-priority"><a href="/donate"><h4>Make A Donation</h4></a></div>
+                        <div className="button"><a href="/partners"><h4>Corporates</h4></a></div>
                     </div>
                 </div>
             </div>
@@ -23,24 +23,26 @@ class HeroSection extends React.Component {
 class ImpactStatsSection extends React.Component {
     render() {
         return (
+            <div className="centred-container">
             <div className="container">
-                <h2>Our Impact</h2>
-                <div className="flex-three-grid">
-                    <div className="flex-three-container">
-                        <img src="" alt="# Number" />
+                <h2>Our impact</h2>
+                <div className="flex-grid">
+                    <div className="flex-container">
+                        <h1><CountUp end={983} separator="," /></h1>
                         <h3 className="legend-header">Donations</h3>
                     </div>
-                    <div className="flex-three-container">
-                        <img src="" alt="# Number" />
+                    <div className="flex-container">
+                        <h1><CountUp end={18652} separator=","/></h1>
                         <h3 className="legend-header">Meals Served</h3>
                     </div>
-                    <div className="flex-three-container">
-                        <img src="" alt="# Number" />
+                    <div className="flex-container">
+                        <h1><CountUp end={163985} separator="," prefix="$" /></h1>
                         <h3 className="legend-header">Funds Raised</h3>
                     </div>
                 </div>
-                <p>We are active in <b>3 states</b> with <b># restaurants</b> on board.</p>
+                <p>We are active in <em>3 states</em>, providing for <em>19 hospitals</em> with <em>#PLACEHOLDER NUMBER# restaurants</em> on board.</p>
                 <a href="/donation">How you can get involved</a>
+                </div>
             </div>
         )
     }
@@ -49,7 +51,7 @@ class ImpactStatsSection extends React.Component {
 class ImpactCaseStudySection extends React.Component {
     render() {
         return (
-            <div className="container">
+            <div className="centred-container">
                 <img alt="A health professional" />
                 <blockquote>Insert quote here</blockquote>
             </div>
@@ -60,28 +62,20 @@ class ImpactCaseStudySection extends React.Component {
 class ThankYouSponsorsSection extends React.Component {
     render() {
         return (
-            <div className="container">
+            <div className="centred-container">
                 <h2>Thank you to our partners and sponsors</h2>
-                <div className="flex-four-grid">
-                    <div className="feature-container">
-                        <div className="feature-content">
+                <div className="flex-grid">
+                    <div className="flex-container">
                             <img src="" alt="Logo of Company" />
-                        </div>
                     </div>
-                    <div className="feature-container">
-                        <div className="feature-content">
+                    <div className="flex-container">
                             <img src="" alt="Logo of Company" />
-                        </div>
                     </div>
-                    <div className="feature-container">
-                        <div className="feature-content">
+                    <div className="flex-container">
                             <img src="" alt="Logo of Company" />
-                        </div>
                     </div>
-                    <div className="feature-container">
-                        <div className="feature-content">
+                    <div className="flex-container">
                             <img src="" alt="Logo of Company" />
-                        </div>
                     </div>
                 </div>
             </div>
@@ -92,23 +86,23 @@ class ThankYouSponsorsSection extends React.Component {
 class CorporateContactSection extends React.Component {
     render() {
         return (
-            <div className="container">
-                <h2>Make a difference. Partner with us</h2>
-                <div className="flex-three-grid">
-                    <div className="feature-container">
-                        <div className="feature-content">
-                            <p>Corporate partnerships will enable us to XXXXXXYYYYZZZZZ.</p>
+            <div className="centred-container">
+                <h2>Partner with us to <span style={{ color: '#7ac143' }}>make a difference</span></h2>
+                <div className="flex-grid">
+                    <div className="flex-container">
+                        <div className="text-content">
+                            <p>Corporate partnerships will enable us to... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         </div>
                     </div>
-                    <div className="feature-container">
-                        <div className="feature-content">
-                            <form action="mailto:Info@alexmakesmeals.com" METHOD="POST" ENCTYPE="text/plain">
+                    <div className="flex-container">
+                        <div className="form-wrapper">
+                            <form action="mailto:Info@alexmakesmeals.com" method="POST" encType="text/plain">
                                 {/* all required */}
-                                <input name="sender-name" value="Full Name" />
-                                <input name="sender-phone" value="Phone" />
-                                <input name="sender-email" value="Email Address" />
-                                <textarea name="message-body" value="Message" />
-                                <input type="submit" value="Submit">
+                                <input name="sender-name" placeholder="Full Name" required />
+                                <input name="sender-phone" placeholder="Phone" required/>
+                                <input name="sender-email" placeholder="Email Address" required />
+                                <textarea name="message-body" placeholder="Message" required />
+                                <input type="submit" value="Send" />
                             </form>
                         </div>
                         </div>
@@ -121,18 +115,18 @@ class CorporateContactSection extends React.Component {
 class NewsFeatureSection extends React.Component {
                     render() {
         return (
-                <div className="container">
+                <div className="centred-container">
                     <h2>As featured on</h2>
-                    <div className="flex-three-grid">
-                        <div className="flex-three-container">
+                    <div className="flex-grid">
+                        <div className="flex-container">
                             <img src="" alt="Sunrise Logo" />
                             <h3 className="legend-header">Headline 1</h3>
                         </div>
-                        <div className="flex-three-container">
+                        <div className="flex-container">
                             <img src="" alt="ABC" />
                             <h3 className="legend-header">Headline 2</h3>
                         </div>
-                        <div className="flex-three-container">
+                        <div className="flex-container">
                             <img src="" alt="The Age" />
                             <h3 className="legend-header">Headline 3</h3>
                         </div>

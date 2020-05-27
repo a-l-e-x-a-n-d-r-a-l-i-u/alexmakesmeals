@@ -19,7 +19,7 @@ export class App extends React.Component {
       { label: 'Partners', page: '/partners' },
       { label: 'News', page: '/news' },
       { label: 'Contact Us', page: '/contact' },
-      { label: 'Donate', page: '/donate', active: true }
+      { label: 'Donate', page: '/donate', priority: true }
     ];
 
     return (<>
