@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './NavBar.js';
 import FooterSection from './FooterSection.js';
 
@@ -24,7 +24,7 @@ export class App extends React.Component {
 
     return (<>
       <NavBar pages={pages} />
-      <BrowserRouter>
+      <HashRouter>
         <div className="container">
           <Switch>
             <Route path="/" component={Home} exact />
@@ -37,7 +37,7 @@ export class App extends React.Component {
           </Switch>
         </div>
         <FooterSection />
-      </BrowserRouter>
+      </HashRouter>
     </>);
   }
 };
