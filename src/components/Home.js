@@ -9,11 +9,9 @@ class HeroSection extends React.Component {
             <div className="large">
                 <div className="hero-container">
                     <h1>Help to feed frontline workers – those who take care of you and your loved ones.</h1>
-                        <h2>Support all medical and ancillary professionals at the frontline of the COVID-19 pandemic.</h2>
-                        <div className="buttons-container">
-                        <div className="button button-priority"><a href="/donate"><h4>Make A Donation</h4></a></div>
-                        <div className="button"><a href="/partners"><h4>Corporates</h4></a></div>
-                    </div>
+                        <h3>Support all medical and ancillary professionals at the frontline of the COVID-19 pandemic.</h3>
+                        <div className="button"><a href="/donate"><h4>Make A Donation</h4></a></div>
+                        <div className="button button-secondary"><a href="/partners"><h4>Corporates</h4></a></div>
                 </div>
             </div>
         )
@@ -28,7 +26,7 @@ class ImpactStatsSection extends React.Component {
                 <h2>Our impact</h2>
                 <div className="flex-grid">
                     <div className="flex-container">
-                        <h1><CountUp end={983} separator="," /></h1>
+                        <h1 ><CountUp end={983} separator="," /></h1>
                         <h3 className="legend-header">Donations</h3>
                     </div>
                     <div className="flex-container">
@@ -40,8 +38,8 @@ class ImpactStatsSection extends React.Component {
                         <h3 className="legend-header">Funds Raised</h3>
                     </div>
                 </div>
-                <p>We are active in <em>3 states</em>, providing for <em>19 hospitals</em> with <em>#PLACEHOLDER NUMBER# restaurants</em> on board.</p>
-                <a href="/donation">How you can get involved</a>
+                <p>We are active across in <em>3 states</em>, providing for <em>19 hospitals</em> with <em>#PLACEHOLDER NUMBER# restaurants</em> on board.</p>
+                <a href="/donation">Get involved</a>
                 </div>
             </div>
         )
@@ -141,7 +139,7 @@ const Home = () => {
     return (<>
                     <section className="has-bg-img" style={KaelanBg}><HeroSection /></section>
                     <section className="plain-bg"><ImpactStatsSection /></section>
-                    <section className="alternate-bg"><ImpactCaseStudySection /></section>
+                    <section className="alternate-bg-2"><ImpactCaseStudySection /></section>
                     <section className="plain-bg"><ThankYouSponsorsSection /></section>
                     <section className="alternate-bg"><CorporateContactSection /></section>
                     <section className="plain-bg"><NewsFeatureSection /></section>

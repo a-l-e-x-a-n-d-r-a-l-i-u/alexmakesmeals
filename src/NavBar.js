@@ -19,7 +19,7 @@ export default class NavBar extends React.Component {
 
     return <nav>
       <ul className='nav-header'>
-      <li><img src={logo} width="50px" alt="Alex Makes Meals logo" /></li>
+      <li><img src={logo} width="37px" alt="Alex Makes Meals logo" /></li>
         {navMarkup}
       </ul>
     </nav>

@@ -1,0 +1,21 @@
+make animatiom trigger on scroll
+https://stackoverflow.com/questions/51044090/react-countup-animation-starts-immediately-after-the-page-loading-should-start
+
+navbar:
+hamburger / responsive
+
+compression:
+change every png to jpeg
+change dimensions & 72dpi of pictures
+
+message box:
+test that is works.
+form should automate sending the message
+send shou1d hover dark green + larger text
+
+fix footer spacing
+
+fix flexbox for mobile
+
+nice light green
+#CFFFB3
