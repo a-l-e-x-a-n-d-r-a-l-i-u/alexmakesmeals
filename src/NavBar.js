@@ -5,9 +5,9 @@ export default class NavBar extends React.Component {
   render() {
     let navMarkup = this.props.pages.map((page, index) => {
       let navLinkMarkup = page.active ? (
-        <h5><a className='nav-link nav-link-active' href={page.page}>{page.label}</a></h5> //In CSS, make donate button (active) highlighted
+        <div className='nav-link'><h5><a className='nav-link-active' href={page.page}>{page.label}</a></h5></div>
       ) : (
-          <h5><a className='nav-link' href={page.page}>{page.label}</a></h5>
+        <div className='nav-link'><h5><a href={page.page}>{page.label}</a></h5></div>
         );
 
       return (<>
