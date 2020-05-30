@@ -2,33 +2,39 @@ import React from 'react';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import KaelanPortrait from '../../images/KaelanPortraitCropped.png';
-import Button from '@material-ui/core/Button';
+import MediaCard from './MediaCard'
 import styled from 'styled-components';
 const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')',   opacity: 0.7};
 
-// function App() {
-//     return (
-//       <Button variant="contained" color="primary">
-//         Hello World
-//       </Button>
-//     );
-// }
+const HeroSectionContainer = styled.div`
+    padding-top: 4em;
+    padding-left: 1em;
+`
+// const HeroSectionContainer = styled.div`
+//     padding-top: 4em;
+//     padding-left: 1em;
+// `
 
-const KaelanBgStyled = styled.section`
-    backgroundImage: 'url(' + KaelanPortrait + ')';
+const MediaContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 4em;
 `
 
 class HeroSection extends React.Component {
     render() {
         return (
-            <div className="large">
+            <HeroSectionContainer className="large">
                 <div className="hero-container">
-                    <h1>Help to feed frontline workers – those who take care of you and your loved ones.</h1>
-                    <h3>Support all medical and ancillary professionals at the frontline of the COVID-19 pandemic.</h3>
+                    <h3><strong>Help to feed frontline workers – those who take care of you and your loved ones.</strong></h3>
+                    <h4>Support all medical and ancillary professionals at the frontline of the COVID-19 pandemic.</h4>
                     <div className="button"><a href="/donate"><h4>Make A Donation</h4></a></div>
                     <div className="button button-secondary"><a href="/partners"><h4>Corporates</h4></a></div>
                 </div>
-            </div>
+            </HeroSectionContainer>
         )
     }
 }
@@ -147,22 +153,13 @@ class NewsFeatureSection extends React.Component {
     render() {
         return (
             <div className="centred-container">
-                <h2>As featured on</h2>
-                <div className="flex-grid">
-                    <div className="flex-container">
-                        <img src="" alt="Sunrise Logo" />
-                        <h3 className="legend-header">Headline 1</h3>
-                    </div>
-                    <div className="flex-container">
-                        <img src="" alt="ABC" />
-                        <h3 className="legend-header">Headline 2</h3>
-                    </div>
-                    <div className="flex-container">
-                        <img src="" alt="The Age" />
-                        <h3 className="legend-header">Headline 3</h3>
-                    </div>
-                </div>
-                <a href="/news">Read more about us in the news</a>
+                <div><h2>As featured on</h2></div>
+                <MediaContainer>
+                    <MediaCard/>
+                    <MediaCard/>
+                    <MediaCard/>
+                </MediaContainer>
+                <a href="/news" >Read more about us in the news</a>
             </div>
         )
     }
