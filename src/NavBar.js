@@ -16,7 +16,13 @@ const LogoContainer = styled.span`
 const NavContainer = styled.span`
   display: flex;
   justify-content: flex-end;
+  padding-right: 2em;
   width: 90% 
+`
+
+const LinkContainer = styled.span`
+  padding-top: 1em;
+  padding-left: 0.5em;
 `
 
 export default class NavBar extends React.Component {
@@ -29,9 +35,9 @@ export default class NavBar extends React.Component {
         );
 
       return (<>
-          <span key={index} className='nav-list-item'>
+          <LinkContainer key={index} className='nav-list-item'>
             {navLinkMarkup}
-          </span>
+          </LinkContainer>
       </>)
     });
 
