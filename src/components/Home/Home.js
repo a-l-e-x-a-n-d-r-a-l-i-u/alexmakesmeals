@@ -3,7 +3,8 @@ import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import KaelanPortrait from '../../images/KaelanPortraitCropped.png';
 import Button from '@material-ui/core/Button';
-const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')' };
+import styled from 'styled-components';
+const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')',   opacity: 0.7};
 
 // function App() {
 //     return (
@@ -12,6 +13,10 @@ const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')' };
 //       </Button>
 //     );
 // }
+
+const KaelanBgStyled = styled.section`
+    backgroundImage: 'url(' + KaelanPortrait + ')';
+`
 
 class HeroSection extends React.Component {
     render() {
