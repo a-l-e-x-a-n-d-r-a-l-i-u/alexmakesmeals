@@ -1,4 +1,4 @@
-make animatiom trigger on scroll
+make countup animatiom run once
 https://stackoverflow.com/questions/51044090/react-countup-animation-starts-immediately-after-the-page-loading-should-start
 
 navbar:
@@ -15,7 +15,7 @@ send shou1d hover dark green + larger text
 
 fix footer spacing
 
-fix flexbox for mobile
+change favicon
 
 nice light green
 #CFFFB3
