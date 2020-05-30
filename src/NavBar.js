@@ -25,6 +25,12 @@ const LinkContainer = styled.span`
   padding-left: 0.5em;
 `
 
+const Logo = styled.img`
+  width: 70px;
+  height: 70px;
+  padding-top: 0.2em;
+`
+
 export default class NavBar extends React.Component {
   render() {
     let navMarkup = this.props.pages.map((page, index) => {
@@ -43,7 +49,7 @@ export default class NavBar extends React.Component {
 
     return <StyledNav>
       <LogoContainer>
-        <img src={logo} width="37px" alt="Alex Makes Meals logo" />
+        <Logo src={logo} alt="Alex Makes Meals logo" />
       </LogoContainer>
       <NavContainer>
         {navMarkup}
