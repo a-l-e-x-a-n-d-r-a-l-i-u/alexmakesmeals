@@ -3,6 +3,7 @@ import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import KaelanPortrait from '../../images/KaelanPortraitCropped.png';
 import MediaCard from './MediaCard'
+import FormCard from './FormCard'
 import styled from 'styled-components';
 const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')',   opacity: 0.7};
 
@@ -10,17 +11,13 @@ const HeroSectionContainer = styled.div`
     padding-top: 4em;
     padding-left: 1em;
 `
-// const HeroSectionContainer = styled.div`
-//     padding-top: 4em;
-//     padding-left: 1em;
-// `
 
 const MediaContainer = styled.div`
     display: flex;
     justify-content: center;
     margin-left: 2em;
     margin-right: 2em;
-    padding-top: 1em;
+    padding-top: 3em;
     padding-bottom: 4em;
 `
 
@@ -133,14 +130,14 @@ class CorporateContactSection extends React.Component {
                     </div>
                     <div className="flex-container">
                         <div className="form-wrapper">
-                            <form action="mailto:Info@alexmakesmeals.com" method="POST" encType="text/plain">
-                                {/* all required */}
+                            {/* <form action="mailto:Info@alexmakesmeals.com" method="POST" encType="text/plain">
                                 <input name="sender-name" placeholder="Full Name" required />
                                 <input name="sender-phone" placeholder="Phone" required />
                                 <input name="sender-email" placeholder="Email Address" required />
                                 <textarea name="message-body" placeholder="Message" required />
                                 <input type="submit" value="Send" />
-                            </form>
+                            </form> */}
+                            <FormCard></FormCard>
                         </div>
                     </div>
                 </div>
