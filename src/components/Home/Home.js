@@ -7,7 +7,7 @@ import CorporateContactSection from './CorporateContactSection/CorporateContactS
 import HeroSection from './HeroSection/HeroSection'
 import KaelanPortrait from '../../images/KaelanPortraitCropped.png';
 import styled from 'styled-components';
-const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')',   opacity: 0.7};
+const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')'};
 
 
 const Home = () => {
