@@ -5,7 +5,8 @@ export const HeroSectionContainer = styled.span`
     padding-left: 1em;
     display: flex;
     justify-content: flex-start;
-    height: 35em;
+    margin-top: -1em;
+    height: 30em;
 `
 
 export const ContentContainer = styled.div`
