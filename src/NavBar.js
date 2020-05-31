@@ -1,5 +1,35 @@
 import React from 'react';
 import logo from './logo-300px.png';
+import styled from 'styled-components';
+
+const StyledNav = styled.nav`
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+`
+const LogoContainer = styled.span`
+  display: flex;
+  justify-content: center; 
+  width: 10% 
+`
+
+const NavContainer = styled.span`
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2em;
+  width: 90% 
+`
+
+const LinkContainer = styled.span`
+  padding-top: 1em;
+  padding-left: 0.5em;
+`
+
+const Logo = styled.img`
+  width: 70px;
+  height: 70px;
+  padding-top: 0.2em;
+`
 
 export default class NavBar extends React.Component {
   render() {
@@ -11,17 +41,23 @@ export default class NavBar extends React.Component {
         );
 
       return (<>
-        <li key={index} className='nav-list-item'>
-          {navLinkMarkup}
-        </li>
+          <LinkContainer key={index} className='nav-list-item'>
+            {navLinkMarkup}
+          </LinkContainer>
       </>)
     });
 
-    return <nav>
-      <ul className='nav-header'>
+    return <StyledNav>
+      <LogoContainer>
+        <Logo src={logo} alt="Alex Makes Meals logo" />
+      </LogoContainer>
+      <NavContainer>
+        {navMarkup}
+      </NavContainer>
+      {/* <ul className='nav-header'>
       <li><img src={logo} width="37px" alt="Alex Makes Meals logo" /></li>
         {navMarkup}
-      </ul>
-    </nav>
+      </ul> */}
+    </StyledNav>
   }
 }
