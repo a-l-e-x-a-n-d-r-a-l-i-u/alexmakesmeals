@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeroSectionContainer = styled.span`
+export const SectionContainer = styled.span`
     padding-left: 1em;
     height: 25em;
 `

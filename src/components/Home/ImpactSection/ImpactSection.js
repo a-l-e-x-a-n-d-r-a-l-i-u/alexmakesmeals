@@ -1,7 +1,7 @@
 import React from 'react';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
-import { HeroSectionContainer,
+import { SectionContainer,
     SectionHeadingContainer,
     StatsContainer,
     StatsColumn,
@@ -14,7 +14,7 @@ import { HeroSectionContainer,
 export default class ImpactSection extends React.Component {
     render() {
         return (
-            <HeroSectionContainer >
+            <SectionContainer >
                 <div className="container">
                     <SectionHeadingContainer>
                         <h2>Our impact</h2>
@@ -62,7 +62,7 @@ export default class ImpactSection extends React.Component {
                         </DonationButton>
                     </DonationButtonContainer>
                 </div>
-            </HeroSectionContainer >
+            </SectionContainer >
         )
     }
 }

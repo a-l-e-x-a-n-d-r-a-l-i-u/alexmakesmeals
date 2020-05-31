@@ -2,6 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import MediaCard from './MediaCard'
 
+export const SectionContainer = styled.span`
+    height: 28em;
+`
+
+export const SectionHeadingContainer = styled.div`
+    text-align: center;
+    padding-bottom: 1em;
+`
+
 const MediaContainer = styled.div`
     display: flex;
     justify-content: center;
@@ -14,15 +23,17 @@ const MediaContainer = styled.div`
 export default class NewsFeatureSection extends React.Component {
     render() {
         return (
-            <div className="centred-container">
-                <div><h2>As featured on</h2></div>
+            <SectionContainer>
+                <SectionHeadingContainer>
+                    <h2>As featured on</h2>
+                </SectionHeadingContainer>
                 <MediaContainer>
                     <MediaCard/>
                     <MediaCard/>
                     <MediaCard/>
                 </MediaContainer>
                 <a href="/news" >Read more about us in the news</a>
-            </div>
+            </SectionContainer>
         )
     }
 }
