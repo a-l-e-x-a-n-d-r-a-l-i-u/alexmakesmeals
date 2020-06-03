@@ -128,6 +128,11 @@ section {
   text-align: center;
 }
 
+/* somehow countup is affecting div size during animation */
+.container {
+  max-width: 100vw
+}
+
 .text-content {
   text-align: left;
 }
@@ -391,7 +396,7 @@ ul.nav-header li img {
 }
 
 /* SM */
-@media screen and (min-width:544px) and (max-width:800px) {
+@media screen and (min-width:620px) and (max-width:800px) {
   h1 {
     font-size: 4;
     line-height: 4.2rem;
@@ -432,14 +437,23 @@ ul.nav-header li img {
   }
 
   .flex-grid {
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
+
+  #sponsorship div { 
+    float: left
+  }
+
+  #news-features .flex-container img {
+    max-width: 100%;
+    height: auto;
+   }
 }
 
 /* XS */
-@media screen and (max-width:543.9px) {
+@media screen and (max-width:619.9px) {
   h1 {
     font-size: 2rem;
     line-height: 2rem;
@@ -484,6 +498,11 @@ ul.nav-header li img {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;  
   }
+
+  #news-features .flex-container img {
+    max-width: 100%;
+    height: auto;
+   }
 
   form {
     display: block;
