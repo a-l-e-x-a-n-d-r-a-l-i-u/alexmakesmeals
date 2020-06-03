@@ -4,7 +4,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 
 import sunriseLogo from '../images/publications/sunrise.png';
 import independentLogo from '../images/publications/independent.png';
-import theAgeLogo from '../images/publications/the-age.svg';
+import theAgeLogo from '../images/publications/the-age.png';
 
 import dareLogo from '../images/sponsorship/Dare.png';
 import lionLogo from '../images/sponsorship/Lion.jpg';
@@ -68,7 +68,7 @@ class ImpactStatsSection extends React.Component {
                         </div>
                     </div>
                     <p>We are active across in <em>3 states</em>, providing for <em>19 hospitals</em> with <em>#PLACEHOLDER NUMBER# restaurants</em> on board.</p>
-                    <a href="/donation">Get involved</a>
+                    <a href="/donation"><h5>Get involved</h5></a>
                 </div>
             </div>
         )
@@ -79,8 +79,9 @@ class ImpactCaseStudySection extends React.Component {
     render() {
         return (
             <div className="centred-container">
-                <img alt="Kelsey Hibberd" />
-                <blockquote>Get PR team to ask them if we can use their quote here</blockquote>
+                <img id="impact-quote" alt="Kelsey Hibberd" />
+                <blockquote>Knowing about this initiative, I was motivated push through and work my night shift tonight. I have volunteered to work nights, working 50-hour night-shift weeks to assist. And whilst I can head to Coles, my energy levels are running very low. A few meals to have as backup would help me an enormous amount for when I really have nothing left in the tank.</blockquote>
+                <p>— Kelsey Hibberd, nurse at a major metro hospital</p>
             </div>
         )
     }
@@ -89,10 +90,10 @@ class ImpactCaseStudySection extends React.Component {
 class ThankYouSponsorsSection extends React.Component {
     render() {
         let sponsorMarkup = this.props.sponsors.map((company) => (
-            <a href="/partners">
+            <a className="link-out" href="/partners">
             <div className="flex-container">
-              <img className="logos" src={company.logo} alt={"Logo of + {company.name}"} />
-              <h5 className="font-weight-normal">{company.name}</h5>
+              <img className="logos" src={company.logo} alt={`Logo of ${company.name}`} />
+              {/* <h5 className="font-weight-normal">{company.name}</h5> */}
             </div>
             </a>
         ));
@@ -100,7 +101,7 @@ class ThankYouSponsorsSection extends React.Component {
         return (
             <div className="centred-container">
                 <h2>Thank you to our partners and sponsors</h2>
-                <div className="flex-grid">
+                <div className="flex-grid" id="sponsorship">
                     {sponsorMarkup}
                 </div>
             </div>
@@ -116,13 +117,18 @@ class CorporateContactSection extends React.Component {
                 <div className="flex-grid">
                     <div className="flex-container">
                         <div className="text-content">
-                            <p>Corporate partnerships will enable us to... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Corporate partnerships will enable us to:
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Consectetur adipiscing elit.</li>
+                                <li>Ut enim ad minim veniam.</li>
+                                <li>Quis nostrud exercitation ullamco.</li>
+                                <li>Duis aute irure dolor in reprehenderit.</li>
+                            </p>
                         </div>
                     </div>
                     <div className="flex-container">
                         <div className="form-wrapper">
                             <form action="mailto:Info@alexmakesmeals.com" method="POST" encType="text/plain">
-                                {/* all required */}
                                 <input name="sender-name" placeholder="Full Name" required />
                                 <input name="sender-phone" placeholder="Phone" required />
                                 <input name="sender-email" placeholder="Email Address" required />
@@ -140,7 +146,7 @@ class CorporateContactSection extends React.Component {
 class NewsFeatureSection extends React.Component {
     render() {
         let mediaMarkup = this.props.media.map((pub, key) => (
-            <a href={pub.url}>
+            <a className="link-out" href={pub.url}>
             <div className="flex-container">
               <img className="logos" src={pub.logo} alt={pub.publisher} />
               <h6 className="font-weight-normal">{pub.title}</h6>
@@ -151,10 +157,10 @@ class NewsFeatureSection extends React.Component {
         return (
             <div className="centred-container">
                 <h2>As featured on</h2>
-                <div className="flex-grid">
+                <div className="flex-grid" id="news-features">
                     {mediaMarkup}
                 </div>
-                <a href="/news">Read more about us in the news</a>
+                <a href="/news"><h5>Read more about us in the news</h5></a>
             </div>
         )
     }

@@ -15,6 +15,8 @@ h2 {
 
 .font-weight-normal {
   font-weight: normal;
+  margin-block-start: .6em;
+  margin-block-end: 1.4em;
 }
 
 body {
@@ -31,6 +33,10 @@ a {
   font-weight: 700;
   transition: all 250ms ease-out;
   text-decoration: none;
+}
+
+.link-out {
+  color: #000
 }
 
 a:hover {
@@ -177,21 +183,21 @@ form * {
 
 .plain-bg {
   background-color: #ffffff;
-  padding-top: 6.667rem;
-  padding-bottom: 6.667rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .alternate-bg {
   background-color: #302e2c;
   color: #ffffff;
-  padding-top: 6.667rem;
-  padding-bottom: 6.667rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .alternate-bg-2 {
   background-color: #E1E6E1;
-  padding-top: 6.667rem;
-  padding-bottom: 6.667rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 #footer {
@@ -280,7 +286,7 @@ nav {
 }
 
 nav h5 {
-  margin: 0px;
+  margin: 4px 0 0 0;
 }
 
 nav a {
@@ -293,7 +299,7 @@ ul.nav-header {
 
 ul.nav-header li {
   float: left;
-  padding: 0px 16px 3px 0px;
+  padding: 0px 56px 3px 0px;
 }
 
 ul.nav-header li img {
@@ -308,8 +314,9 @@ ul.nav-header li img {
 
 
 .nav-link-cta {
+  float: right;
   padding: 0 .5em;
-  border-width: 3px 3px 2px 3px;
+  border-width: 2px 3px 3px 3px;
   border-style: solid;
   border-color: #7ac143;
   margin-top: 2px;
@@ -327,17 +334,26 @@ ul.nav-header li img {
 }
 
 .logos {
-  height: 150px;
-  filter: opacity(30%);
+  height: 100px;
+  border: #fff 5px solid;
 }
 
-.logos:hover {
-  filter: opacity(100%);
-  transition: all 250ms ease-out;
+#impact-quote {
+  display: inline;
+  border-radius: 50%;
 }
 
-/* Medium to Large */
-@media screen and (min-width: 768px) {
+/* Extra Accomodations for News Features Section */
+@media screen and (max-width: 1600px) {
+  #news-features {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+   }
+}
+
+  /* Medium to Large */
+@media screen and (min-width: 801px) {
   h1 {
     font-size: 4rem;
     line-height: 4.2rem
@@ -371,10 +387,11 @@ ul.nav-header li img {
   .footer-socials a img {
     padding: 1em
   }
+
 }
 
 /* SM */
-@media screen and (min-width:544px) and (max-width:767.9px) {
+@media screen and (min-width:544px) and (max-width:800px) {
   h1 {
     font-size: 4;
     line-height: 4.2rem;
