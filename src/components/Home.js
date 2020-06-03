@@ -67,7 +67,7 @@ class ImpactStatsSection extends React.Component {
                             <h3 className="font-weight-normal">Funds Raised</h3>
                         </div>
                     </div>
-                    <p>We are active across in <em>3 states</em>, providing for <em>19 hospitals</em> with <em>#PLACEHOLDER NUMBER# restaurants</em> on board.</p>
+                    <p>We are active across in <em>3 states</em>, providing for <em>19 hospitals</em> with <em>11 restaurants</em> on board.</p>
                     <a href="/donation"><h5>Get involved</h5></a>
                 </div>
             </div>
