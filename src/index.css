@@ -118,7 +118,6 @@ section {
 
 .centred-container {
   padding: 0 3em;
-  overflow: auto;
   margin: auto;
   text-align: center;
 }
@@ -213,7 +212,7 @@ form * {
 #footer p {
   text-align: left;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 17px;
 }
 
 .footer-socials {
@@ -266,8 +265,8 @@ form * {
 
 .flex-container {
   flex: 1;
-  padding-right: 1em;
-  padding-left: 1em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
 
 nav {
@@ -325,6 +324,16 @@ ul.nav-header li img {
 
 .nav-link-cta a:hover {
   color: #1C7C54;
+}
+
+.logos {
+  height: 150px;
+  filter: opacity(30%);
+}
+
+.logos:hover {
+  filter: opacity(100%);
+  transition: all 250ms ease-out;
 }
 
 /* Medium to Large */

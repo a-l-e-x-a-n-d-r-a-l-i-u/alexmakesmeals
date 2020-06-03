@@ -1,6 +1,16 @@
 import React from 'react';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
+
+import sunriseLogo from '../images/publications/sunrise.png';
+import independentLogo from '../images/publications/independent.png';
+import theAgeLogo from '../images/publications/the-age.svg';
+
+import dareLogo from '../images/sponsorship/Dare.png';
+import lionLogo from '../images/sponsorship/Lion.jpg';
+import hardwareClubLogo from '../images/sponsorship/Hardware-Club.jpg';
+import toyotaLogo from '../images/sponsorship/Toyota.png';
+
 import KaelanPortrait from '../images/KaelanPortraitCropped.png';
 const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')' };
 
@@ -69,8 +79,8 @@ class ImpactCaseStudySection extends React.Component {
     render() {
         return (
             <div className="centred-container">
-                <img alt="A health professional" />
-                <blockquote>Insert quote here</blockquote>
+                <img alt="Kelsey Hibberd" />
+                <blockquote>Get PR team to ask them if we can use their quote here</blockquote>
             </div>
         )
     }
@@ -78,22 +88,20 @@ class ImpactCaseStudySection extends React.Component {
 
 class ThankYouSponsorsSection extends React.Component {
     render() {
+        let sponsorMarkup = this.props.sponsors.map((company) => (
+            <a href="/partners">
+            <div className="flex-container">
+              <img className="logos" src={company.logo} alt={"Logo of + {company.name}"} />
+              <h5 className="font-weight-normal">{company.name}</h5>
+            </div>
+            </a>
+        ));
+
         return (
             <div className="centred-container">
                 <h2>Thank you to our partners and sponsors</h2>
                 <div className="flex-grid">
-                    <div className="flex-container">
-                        <img src="" alt="Logo of Company" />
-                    </div>
-                    <div className="flex-container">
-                        <img src="" alt="Logo of Company" />
-                    </div>
-                    <div className="flex-container">
-                        <img src="" alt="Logo of Company" />
-                    </div>
-                    <div className="flex-container">
-                        <img src="" alt="Logo of Company" />
-                    </div>
+                    {sponsorMarkup}
                 </div>
             </div>
         )
@@ -132,10 +140,12 @@ class CorporateContactSection extends React.Component {
 class NewsFeatureSection extends React.Component {
     render() {
         let mediaMarkup = this.props.media.map((pub, key) => (
+            <a href={pub.url}>
             <div className="flex-container">
-              <img src="" alt={pub.publisher} />
-              <h5 className="font-weight-normal">{pub.title}</h5>
+              <img className="logos" src={pub.logo} alt={pub.publisher} />
+              <h6 className="font-weight-normal">{pub.title}</h6>
             </div>
+            </a>
         ));
 
         return (
@@ -151,10 +161,17 @@ class NewsFeatureSection extends React.Component {
 }
 
 const Home = () => {
+    let featuredCompanies = [
+        { name: 'Dare', logo: dareLogo },
+        { name: 'The Hardware Club', logo: hardwareClubLogo },
+        { name: 'Lion', logo: lionLogo },
+        { name: 'Toyota', logo: toyotaLogo },
+    ];
+
     let publications = [
-        { key: 1, title: 'The Uni Student Making Healthy Meals For Our Health Workers', publisher: 'Independent', date: 'Apr 5 2020', url: 'https://10play.com.au/theproject/exclusives/2019/the-uni-student-making-healthy-meals-for-our-health-workers/tpv200405dlrwc' },
-        { key: 2, title: 'First a humble lasagne, then ‘loaves and fishes’ to feed healthcare heroes', publisher: 'The Age', date: 'Apr 2 2020', url: 'https://www.theage.com.au/lifestyle/health-and-wellness/first-a-humble-lasagne-then-loaves-and-fishes-to-feed-healthcare-heroes-20200401-p54g38.html?fbclid=IwAR2gNObIgJq_DYiDG2WwM7K0IFivUlPU_CXfsk2I-5eMiyCK88Cmwx9NTSI' },
-        { key: 3, title: 'Coronavirus: Uni student making thousands of meals for exhausted health workers', publisher: 'Sunrise', date: 'Apr 10 2020', url: 'https://7news.com.au/sunrise/on-the-show/coronavirus-melbourne-uni-student-making-thousands-of-meals-for-exhausted-health-workers-c-969049' },
+        { key: 1, title: 'The Uni Student Making Healthy Meals For Our Health Workers', publisher: 'Independent', logo: independentLogo, date: 'Apr 5 2020', url: 'https://10play.com.au/theproject/exclusives/2019/the-uni-student-making-healthy-meals-for-our-health-workers/tpv200405dlrwc' },
+        { key: 2, title: 'First a humble lasagne, then ‘loaves and fishes’ to feed healthcare heroes', publisher: 'The Age', logo: theAgeLogo, date: 'Apr 2 2020', url: 'https://www.theage.com.au/lifestyle/health-and-wellness/first-a-humble-lasagne-then-loaves-and-fishes-to-feed-healthcare-heroes-20200401-p54g38.html?fbclid=IwAR2gNObIgJq_DYiDG2WwM7K0IFivUlPU_CXfsk2I-5eMiyCK88Cmwx9NTSI' },
+        { key: 3, title: 'Coronavirus: Uni student making thousands of meals for exhausted health workers', publisher: 'Sunrise', logo: sunriseLogo, date: 'Apr 10 2020', url: 'https://7news.com.au/sunrise/on-the-show/coronavirus-melbourne-uni-student-making-thousands-of-meals-for-exhausted-health-workers-c-969049' },
         { key: 4, title: 'Melbourne teenager Alex Dekker helping frontline health workers with meals', publisher: 'ABC Radio', date: 'Apr 5 2020', url: 'https://www.abc.net.au/radio/melbourne/programs/melbourneweekends/meet-the-teenager-feeding-melbournes-medics/12123188' },
         { key: 5, title: 'Meet the 20-year-old making meals for our frontline health workers', publisher: 'ABC Radio', date: 'Apr 6 2020', url: 'https://www.abc.net.au/radionational/programs/breakfast/alex-makes-meals/12219076?fbclid=IwAR1sEQBsR-GhC4zrJRMqUDglyeolnFNauzIFm2S0qvr_BcynOsdFPRKAbDQ' },
         { key: 6, title: 'From lasagne for his doctor sister to thousands of meals for health workers', publisher: 'SBS', date: 'Apr 13 2020', url: 'https://www.sbs.com.au/food/article/2020/04/13/lasagne-his-doctor-sister-thousands-meals-health-workers?fbclid=IwAR2CjI_4ChRYevL8Sigmrr97WcnK4xB9pwawJt8A80nBli3gyDVKmw4sxJU' },
@@ -162,15 +179,16 @@ const Home = () => {
         { key: 8, title: 'If You’re In The Mood For Some Good News, Here Are 12 Local Stories For You', publisher: 'Where To', date: 'Apr 17 2020', url: 'https://www.buzzfeed.com/marielasummerhays01/feel-good-australian-stories-coronavirus?origin=web-hf' },
         { key: 9, title: 'Red Rooster helps Alex Makes Meals deliver food to healthcare workers', publisher: 'Franchise Business', date: 'Apr 10 2020', url: 'https://www.franchisebusiness.com.au/red-rooster-alex-makes-meals-food-deliveries/' },
         { key: 10, title: 'Monash student becomes healthcare workers’ saviour by rescuing food amid pandemic', publisher: 'Mojo News', date: 'Apr 10 2020', url: 'https://www.mojonews.com.au/monash-student-makes-meals-for-healthcare-professionals-working-during-covid-19' },
-        { key: 11, title: 'Student Provides Thousands of Homemade Meals to Healthcare Workers', publisher: 'Independent', date: 'Apr 10 2020', url: 'https://www.independent.co.uk/life-style/australian-student-coronavirus-free-meals-healthcare-workers-a9458911.html?fbclid=IwAR1kSa_EkxMgp2Uo_WCQMGHUbKm1xMtSK2kazj7ZLcdg6DZOIuFXEjHjRpU' },
+        { key: 11, title: 'Student Provides Thousands of Homemade Meals to Healthcare Workers', publisher: 'Independent', logo: independentLogo, date: 'Apr 10 2020', url: 'https://www.independent.co.uk/life-style/australian-student-coronavirus-free-meals-healthcare-workers-a9458911.html?fbclid=IwAR1kSa_EkxMgp2Uo_WCQMGHUbKm1xMtSK2kazj7ZLcdg6DZOIuFXEjHjRpU' },
     ];
+    
     let selectedPublications = publications.filter(pub => pub.key === 2 || pub.key === 3 || pub.key === 11);
 
 return (<>
         <section className="has-bg-img" style={KaelanBg}><HeroSection /></section>
         <section className="plain-bg"><ImpactStatsSection /></section>
         <section className="alternate-bg-2"><ImpactCaseStudySection /></section>
-        <section className="plain-bg"><ThankYouSponsorsSection /></section>
+        <section className="plain-bg"><ThankYouSponsorsSection sponsors={featuredCompanies} /></section>
         <section className="alternate-bg"><CorporateContactSection /></section>
         <section className="plain-bg"><NewsFeatureSection media={selectedPublications} /></section>
     </>)
