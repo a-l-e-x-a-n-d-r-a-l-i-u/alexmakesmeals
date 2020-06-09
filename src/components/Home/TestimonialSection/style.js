@@ -20,6 +20,9 @@ export const ImageContainer = styled.span`
 `
 
 export const QuoteContainer = styled.span`
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
     display: flex;
     justify-content: center;
     width: 50%; 

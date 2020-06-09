@@ -1,4 +1,35 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledNav = styled.nav`
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+`
+const LogoContainer = styled.span`
+  display: flex;
+  justify-content: center; 
+  width: 10% 
+  margin-left: 3em;
+`
+
+const NavContainer = styled.span`
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2em;
+  width: 90% 
+`
+
+const LinkContainer = styled.span`
+  padding-top: 1em;
+  padding-left: 0.5em;
+`
+
+const Logo = styled.img`
+  width: 70px;
+  height: 70px;
+  padding-top: 0.2em;
+`
 
 export const DonationButton = styled.div`
     background-color: #7AC143;
@@ -31,17 +62,21 @@ export default class NavBar extends React.Component {
         );
 
       return (<>
-        <li key={index} className='nav-list-item'>
-          {navLinkMarkup}
-        </li>
+          <LinkContainer key={index} className='nav-list-item'>
+            {navLinkMarkup}
+          </LinkContainer>
       </>)
     });
 
-    return <nav>
-      <ul className='nav-header'>
-      <li><a href="/"><img src={process.env.PUBLIC_URL + 'AMM-logo.png'} width="45px" alt="Alex Makes Meals logo" /></a></li>
+    return <StyledNav>
+      <a href="/">
+      <LogoContainer>
+        <Logo src={process.env.PUBLIC_URL + 'AMM-logo.png'} alt="Alex Makes Meals logo" />
+      </LogoContainer>
+      </a>
+      <NavContainer>
         {navMarkup}
-      </ul>
-    </nav>
+      </NavContainer>
+    </StyledNav>
   }
 }

@@ -6,7 +6,7 @@ export const HeroSectionContainer = styled.span`
     display: flex;
     justify-content: flex-start;
     margin-top: -1em;
-    height: 30em;
+    height: 35em;
 `
 
 export const ContentContainer = styled.div`

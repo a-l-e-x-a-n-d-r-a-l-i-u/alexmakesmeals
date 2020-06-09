@@ -10,7 +10,6 @@ import { SectionContainer,
     ButtonText
 } from './style'
 
-
 export default class ImpactSection extends React.Component {
     render() {
         return (

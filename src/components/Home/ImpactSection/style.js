@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SectionContainer = styled.span`
     padding-left: 1em;
-    height: 25em;
+    height: 28em;
 `
 
 export const SectionHeadingContainer = styled.div`
@@ -12,7 +12,8 @@ export const SectionHeadingContainer = styled.div`
 `
 
 export const StatsContainer = styled.span`
-    padding-bottom: 3em;
+    padding-top: 1em;
+    padding-bottom: 4em;
     display: flex;
     justify-content: center;
     width: 100%;
