@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SectionContainer = styled.span`
     padding-left: 1em;
-    height: 25em;
+    height: 28em;
 `
 
 export const SectionHeadingContainer = styled.div`

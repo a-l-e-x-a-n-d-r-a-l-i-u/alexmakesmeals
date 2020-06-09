@@ -1,61 +1,59 @@
 import React from 'react';
+// import logo from './logo-300px.png';
+import styled from 'styled-components';
 
-export const DonationButton = styled.div`
-    background-color: #7AC143;
-    text-align: center;
-    border-radius: 4px;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
-    margin-top: 0.2em;
+const StyledNav = styled.nav`
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+`
+const LogoContainer = styled.span`
+  display: flex;
+  justify-content: center; 
+  width: 10% 
 `
 
-export const ButtonText = styled.h5`
-    color: white;
+const NavContainer = styled.span`
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2em;
+  width: 90% 
+`
+
+const LinkContainer = styled.span`
+  padding-top: 1em;
+  padding-left: 0.5em;
+`
+
+const Logo = styled.img`
+  width: 70px;
+  height: 70px;
+  padding-top: 0.2em;
 `
 
 export default class NavBar extends React.Component {
   render() {
     let navMarkup = this.props.pages.map((page, index) => {
       let navLinkMarkup = page.priority ? (
-        // <div className='nav-link-cta'><a href={page.page}><h5>{page.label}</h5></a></div>
-        <DonationButton>
-                            <a href={page.page}>
-                                <ButtonText>
-                                  {page.label}
-                                </ButtonText>
-                            </a>
-                        </DonationButton>
+        <div className='nav-link-cta'><a href={page.page}><h5>{page.label}</h5></a></div>
       ) : (
         <div className='nav-link'><h5><a href={page.page}>{page.label}</a></h5></div>
         );
 
       return (<>
-        <li key={index} className='nav-list-item'>
-          {navLinkMarkup}
-        </li>
+          <LinkContainer key={index} className='nav-list-item'>
+            {navLinkMarkup}
+          </LinkContainer>
       </>)
     });
 
-<<<<<<< HEAD
     return <StyledNav>
-      <a href="/">
-      <LogoContainer>
+      {/* <LogoContainer>
         <Logo src={logo} alt="Alex Makes Meals logo" />
-      </LogoContainer>
-      </a>
+      </LogoContainer> */}
       <NavContainer>
         {navMarkup}
       </NavContainer>
     </StyledNav>
-=======
-    return <nav>
-      <ul className='nav-header'>
-      <li><img src={process.env.PUBLIC_URL + 'AMM-logo.png'} width="45px" alt="Alex Makes Meals logo" /></li>
-        {navMarkup}
-      </ul>
-    </nav>
->>>>>>> d01d3d10ea9ee475858e3f9afffc9b1822a65048
   }
 }

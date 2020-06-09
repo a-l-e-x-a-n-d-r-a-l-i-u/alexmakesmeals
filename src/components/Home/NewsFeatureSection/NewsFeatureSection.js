@@ -20,6 +20,11 @@ const MediaContainer = styled.div`
     padding-bottom: 4em;
 `
 
+const LinkContainer = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
 export default class NewsFeatureSection extends React.Component {
     render() {
         return (
@@ -32,7 +37,9 @@ export default class NewsFeatureSection extends React.Component {
                     <MediaCard/>
                     <MediaCard/>
                 </MediaContainer>
-                <a href="/news" >Read more about us in the news</a>
+                <LinkContainer>
+                    <a href="/news" >Read more about us in the news</a>
+                </LinkContainer>
             </SectionContainer>
         )
     }

@@ -3,7 +3,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './NavBar.js';
 import FooterSection from './FooterSection.js';
 
-import Home from './components/Home.js';
+import Home from './components/Home/Home';
 import About from './components/About.js';
 import Partners from './components/Partners.js';
 import News from './components/News.js';
