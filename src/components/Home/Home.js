@@ -12,6 +12,7 @@ const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')'};
 const Home = () => {
     return (<>
         <section className="has-bg-img" style={KaelanBg}><HeroSection /></section>
+        <section className="has-bg-img" ><HeroSection /></section>
         <section className="plain-bg"><ImpactSection /></section>
         <section className="alternate-bg-2"><TestimonialSection/></section>
         <section className="plain-bg"><ThankYouSponsorsSection /></section>
