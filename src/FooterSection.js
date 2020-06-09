@@ -1,8 +1,8 @@
 import React from 'react';
-import facebookIcon from './images/facebook.png';
-import twitterIcon from './images/twitter.png';
-import linkedinIcon from './images/linkedin.png';
-import instagramIcon from './images/instagram.png';
+import facebookIcon from './socials/images/facebook.png';
+import twitterIcon from './socials/images/twitter.png';
+import linkedinIcon from './socials/images/linkedin.png';
+import instagramIcon from './socials/images/instagram.png';
 import styled from 'styled-components';
 
 const StyledFooter = styled.div`
