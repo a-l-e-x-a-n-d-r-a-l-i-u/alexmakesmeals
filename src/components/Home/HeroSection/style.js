@@ -39,5 +39,3 @@ export const CorporatesButton = styled.div`
     padding-top: 0.2em;
     padding-bottom: 0.2em;
 `
-
-export const Container = styled.div``
