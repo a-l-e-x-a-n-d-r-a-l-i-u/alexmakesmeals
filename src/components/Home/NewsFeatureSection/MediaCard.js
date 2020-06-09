@@ -15,13 +15,13 @@ const StyledCardMedia = styled(CardMedia)`
     height: 8em;
 `
 
-export default function MediaCard() {
+export default function MediaCard(props) {
 
   return (
     <StyledCard >
       <CardActionArea>
         <StyledCardMedia
-          image=""
+          image={props.image}
           title=""
         />
         <CardContent>

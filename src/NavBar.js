@@ -1,5 +1,5 @@
 import React from 'react';
-// import logo from './logo-300px.png';
+import logo from './images/AMM-logo.png';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
@@ -11,6 +11,7 @@ const LogoContainer = styled.span`
   display: flex;
   justify-content: center; 
   width: 10% 
+  margin-left: 3em;
 `
 
 const NavContainer = styled.span`
@@ -31,11 +32,32 @@ const Logo = styled.img`
   padding-top: 0.2em;
 `
 
+export const DonationButton = styled.div`
+    background-color: #7AC143;
+    text-align: center;
+    border-radius: 4px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    margin-top: 0.2em;
+`
+
+export const ButtonText = styled.h5`
+    color: white;
+`
+
 export default class NavBar extends React.Component {
   render() {
     let navMarkup = this.props.pages.map((page, index) => {
       let navLinkMarkup = page.priority ? (
-        <div className='nav-link-cta'><a href={page.page}><h5>{page.label}</h5></a></div>
+        <DonationButton>
+          <a href={page.page}>
+            <ButtonText>
+              {page.label}
+            </ButtonText>
+          </a>
+        </DonationButton>
       ) : (
         <div className='nav-link'><h5><a href={page.page}>{page.label}</a></h5></div>
         );
@@ -48,9 +70,11 @@ export default class NavBar extends React.Component {
     });
 
     return <StyledNav>
-      {/* <LogoContainer>
+      <a href="/">
+      <LogoContainer>
         <Logo src={logo} alt="Alex Makes Meals logo" />
-      </LogoContainer> */}
+      </LogoContainer>
+      </a>
       <NavContainer>
         {navMarkup}
       </NavContainer>
