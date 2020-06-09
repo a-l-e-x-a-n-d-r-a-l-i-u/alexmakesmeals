@@ -1,10 +1,31 @@
 import React from 'react';
 
+export const DonationButton = styled.div`
+    background-color: #7AC143;
+    text-align: center;
+    border-radius: 4px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    margin-top: 0.2em;
+`
+
+export const ButtonText = styled.h5`
+    color: white;
+`
+
 export default class NavBar extends React.Component {
   render() {
     let navMarkup = this.props.pages.map((page, index) => {
       let navLinkMarkup = page.priority ? (
-        <div className='nav-link-cta'><a href="https://donorbox.org/donate-a-meal"><h5>{page.label}</h5></a></div>
+        <DonationButton>
+                            <a href="https://donorbox.org/donate-a-meal">
+                                <ButtonText>
+                                  {page.label}
+                                </ButtonText>
+                            </a>
+                        </DonationButton>
       ) : (
         <div className='nav-link'><h5><a href={page.page}>{page.label}</a></h5></div>
         );
