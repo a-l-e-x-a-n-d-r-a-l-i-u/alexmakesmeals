@@ -3,7 +3,6 @@ import facebookIcon from './images/facebook.png';
 import twitterIcon from './images/twitter.png';
 import linkedinIcon from './images/linkedin.png';
 import instagramIcon from './images/instagram.png';
-import logo from './images/AMM-logo.png';
 import styled from 'styled-components';
 
 const StyledFooter = styled.div`
@@ -62,7 +61,7 @@ export default class FooterSection extends React.Component {
               <StyledParagraph>Copyright © 2020 · All Rights Reserved · Alex Makes Meals</StyledParagraph>
             </StatementContainer>
             <LogoContainer>
-              <Logo src={logo} alt="Alex Makes Meals logo" />
+              <Logo src={process.env.PUBLIC_URL + 'AMM-logo.png'} alt="Alex Makes Meals logo" />
             </LogoContainer>
             <TCContainer>
               <StyledParagraph>Terms & Conditions</StyledParagraph>

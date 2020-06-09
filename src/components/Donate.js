@@ -2,10 +2,8 @@ import React from 'react';
 
 const Donate = () => {
 	return (
-			<section id="section1">
-				<div className="container">
+				<div className="centred-container">
 				</div>
-			</section>
 	)
 }
 

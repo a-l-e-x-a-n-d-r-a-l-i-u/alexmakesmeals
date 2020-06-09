@@ -2,9 +2,9 @@ import React from 'react';
 
 const Partners = () => {
 	return (
-			<section id="section1" style={{ height: "100vh" }}>
-				Partners
-			</section>
+			<div className="centred-container" style={{minWidth: "100vh", padding: "5em 0"}}>
+				<h1>This page is coming soon!</h1>
+			</div>
 	)
 }
 

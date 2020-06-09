@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './images/AMM-logo.png';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
@@ -52,12 +51,12 @@ export default class NavBar extends React.Component {
     let navMarkup = this.props.pages.map((page, index) => {
       let navLinkMarkup = page.priority ? (
         <DonationButton>
-          <a href={page.page}>
-            <ButtonText>
-              {page.label}
-            </ButtonText>
-          </a>
-        </DonationButton>
+                            <a href="https://donorbox.org/donate-a-meal">
+                                <ButtonText>
+                                  {page.label}
+                                </ButtonText>
+                            </a>
+                        </DonationButton>
       ) : (
         <div className='nav-link'><h5><a href={page.page}>{page.label}</a></h5></div>
         );
@@ -72,7 +71,7 @@ export default class NavBar extends React.Component {
     return <StyledNav>
       <a href="/">
       <LogoContainer>
-        <Logo src={logo} alt="Alex Makes Meals logo" />
+        <Logo src={process.env.PUBLIC_URL + 'AMM-logo.png'} alt="Alex Makes Meals logo" />
       </LogoContainer>
       </a>
       <NavContainer>

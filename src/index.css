@@ -109,7 +109,7 @@ section {
 }
 
 .large {
-  min-height: 25vh;
+  min-height: 75vh;
 }
 
 .hero-container {
@@ -348,6 +348,14 @@ ul.nav-header li img {
   border-radius: 50%;
 }
 
+blockquote {
+  font-style: oblique;
+}
+
+.profile-pic {
+  width: 400px;
+}
+
 /* Extra Accomodations for News Features Section */
 @media screen and (max-width: 1600px) {
   #news-features {
@@ -358,7 +366,7 @@ ul.nav-header li img {
 }
 
   /* Medium to Large */
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 991px) {
   h1 {
     font-size: 4rem;
     line-height: 4.2rem
@@ -396,7 +404,7 @@ ul.nav-header li img {
 }
 
 /* SM */
-@media screen and (min-width:620px) and (max-width:800px) {
+@media screen and (min-width:620px) and (max-width:990px) {
   h1 {
     font-size: 4;
     line-height: 4.2rem;
