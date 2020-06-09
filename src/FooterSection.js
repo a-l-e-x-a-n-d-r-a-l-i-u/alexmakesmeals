@@ -1,8 +1,8 @@
 import React from 'react';
-import facebookIcon from './images/facebook.png';
-import twitterIcon from './images/twitter.png';
-import linkedinIcon from './images/linkedin.png';
-import instagramIcon from './images/instagram.png';
+import facebookIcon from './images/socials/facebook.png';
+import twitterIcon from './images/socials/twitter.png';
+import linkedinIcon from './images/socials/linkedin.png';
+import instagramIcon from './images/socials/instagram.png';
 
 export default class FooterSection extends React.Component {
   render() {

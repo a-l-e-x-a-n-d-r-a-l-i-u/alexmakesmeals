@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo-300px.png';
 
 export default class NavBar extends React.Component {
   render() {
@@ -19,7 +18,7 @@ export default class NavBar extends React.Component {
 
     return <nav>
       <ul className='nav-header'>
-      <li><img src={logo} width="37px" alt="Alex Makes Meals logo" /></li>
+      <li><a href="/"><img src={process.env.PUBLIC_URL + 'AMM-logo.png'} width="45px" alt="Alex Makes Meals logo" /></a></li>
         {navMarkup}
       </ul>
     </nav>

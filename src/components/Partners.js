@@ -2,9 +2,9 @@ import React from 'react';
 
 const Partners = () => {
 	return (
-			<section id="section1" style={{ height: "100vh" }}>
+			<div className="centred-container">
 				Partners
-			</section>
+			</div>
 	)
 }
 
