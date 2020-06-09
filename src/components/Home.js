@@ -114,7 +114,6 @@ class CorporateContactSection extends React.Component {
                     <div className="flex-container">
                         <div className="form-wrapper">
                             <form action="mailto:Info@alexmakesmeals.com" method="POST" encType="text/plain">
-                                {/* all required */}
                                 <input name="sender-name" placeholder="Full Name" required />
                                 <input name="sender-phone" placeholder="Phone" required />
                                 <input name="sender-email" placeholder="Email Address" required />
