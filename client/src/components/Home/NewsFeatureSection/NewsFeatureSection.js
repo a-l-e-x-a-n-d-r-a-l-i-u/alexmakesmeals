@@ -3,7 +3,9 @@ import publications from '../../../publications.js';
 
 export default class NewsFeatureSection extends React.Component {
     render() {
-        let mediaMarkup = publications.map((pub, key) => (
+        let selectedPublications = publications.filter(pub => pub.key === 2 || pub.key === 3 || pub.key === 11);
+
+        let mediaMarkup = selectedPublications.map((pub, key) => (
             <a className="link-out" href={pub.url}>
             <div className="flex-container">
               <img className="logos" src={pub.logo} alt={pub.publisher} />
