@@ -19,6 +19,7 @@
         "prop-types": "^15.7.2",
         "react-scripts": "3.4.1"
     },
+    "devDependencies": {},
     "scripts": {
         "build": "cd client && npm run build",
         "install": "cd client && npm install",
