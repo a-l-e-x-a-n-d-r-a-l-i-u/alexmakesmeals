@@ -31,7 +31,9 @@ export default class CorporateContactSection extends React.Component {
                 <div className="flex-grid">
                     <div className="flex-container">
                         <TextContainer>
-                            <p>Corporate partnerships will enable us to... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>The spread of COVID-19 means our nation is not only facing its biggest ever health crisis but also our hospitals, emergency services, contact tracing centres, testing centres and other important facilities are understaffed and overworked during times of crisis.</p>
+                        <p>Our frontline medical staff are working harder and longer than ever before. They are being asked to dig deeper than ever before. So together, let's support them in their hard work in keeping us safe and well.</p>
+                        <p>Corporate partnerships will enable us to help to feed those that face food insecurity, who need our support.</p>
                         </TextContainer>
                     </div>
                         <CardContainer>
