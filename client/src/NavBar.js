@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import logo from './images/logo.png'; //duplicate of process.env.PUBLIC_URL + 'AMM-logo.png'
 
 export const DonationButton = styled.div`
     background-color: #7AC143;
@@ -40,7 +41,7 @@ export default class NavBar extends React.Component {
 
     return <nav>
       <ul className='nav-header'>
-      <li><a href="/"><img src={process.env.PUBLIC_URL + 'AMM-logo.png'} width="45px" alt="Alex Makes Meals logo" /></a></li>
+      <li><a href="/"><img src={logo} width="45px" alt="Alex Makes Meals logo" /></a></li>
         {navMarkup}
       </ul>
     </nav>

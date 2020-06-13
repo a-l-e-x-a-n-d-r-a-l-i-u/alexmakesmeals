@@ -23,6 +23,7 @@
     "scripts": {
         "build": "cd client && npm run build",
         "install": "cd client && npm install",
+        "postinstall": "npm run build",
         "start": "nodemon index.js",
         "server": "node index.js",
         "client": "npm run start --prefix client",
