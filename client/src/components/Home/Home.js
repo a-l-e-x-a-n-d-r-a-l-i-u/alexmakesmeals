@@ -1,11 +1,12 @@
 import React from 'react';
-import NewsFeatureSection from './NewsFeatureSection/NewsFeatureSection'
+import HeroSection from './HeroSection/HeroSection'
 import ImpactSection from './ImpactSection/ImpactSection'
 import TestimonialSection from './TestimonialSection/TestimonialSection'
 import ThankYouSponsorsSection from './ThankYouSponsorsSection/ThankYouSponsorsSection'
 import CorporateContactSection from './CorporateContactSection/CorporateContactSection'
-import HeroSection from './HeroSection/HeroSection'
-import KaelanPortrait from '../../images/KaelanPortraitCroppedEdited2.jpg';
+import NewsFeatureSection from './NewsFeatureSection/NewsFeatureSection'
+
+import KaelanPortrait from '../../images/photos/KaelanPortraitEdited2.jpg';
 const KaelanBg = { backgroundImage: 'url(' + KaelanPortrait + ')'};
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 export const DonationButton = styled.div`
     background-color: #7AC143;

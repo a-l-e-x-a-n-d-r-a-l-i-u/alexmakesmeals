@@ -1,39 +1,25 @@
 import React from 'react';
-import styled from 'styled-components';
-import MediaCard from './MediaCard'
-
-export const SectionContainer = styled.span`
-    height: 28em;
-`
-
-export const SectionHeadingContainer = styled.div`
-    text-align: center;
-    padding-bottom: 1em;
-`
-
-const MediaContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    margin-left: 2em;
-    margin-right: 2em;
-    padding-top: 3em;
-    padding-bottom: 4em;
-`
+import publications from '../../../publications.js';
 
 export default class NewsFeatureSection extends React.Component {
     render() {
+        let mediaMarkup = publications.map((pub, key) => (
+            <a className="link-out" href={pub.url}>
+            <div className="flex-container">
+              <img className="logos" src={pub.logo} alt={pub.publisher} />
+              <h6 className="font-weight-normal">{pub.title}</h6>
+            </div>
+            </a>
+        ));
+
         return (
-            <SectionContainer>
-                <SectionHeadingContainer>
-                    <h2>As featured on</h2>
-                </SectionHeadingContainer>
-                <MediaContainer>
-                    <MediaCard/>
-                    <MediaCard/>
-                    <MediaCard/>
-                </MediaContainer>
-                <a href="/news" >Read more about us in the news</a>
-            </SectionContainer>
+            <div className="centred-container">
+                <h2>As featured on</h2>
+                <div className="flex-grid" id="news-features">
+                    {mediaMarkup}
+                </div>
+                <a href="/news"><h5>Read more about us in the news</h5></a>
+            </div>
         )
     }
 }

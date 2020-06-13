@@ -1,26 +1,15 @@
 import React from 'react';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
-import { SectionContainer,
-    SectionHeadingContainer,
-    StatsContainer,
-    StatsColumn,
-    DonationButtonContainer,
-    DonationButton,
-    ButtonText
-} from './style'
 
-
-export default class ImpactSection extends React.Component {
+export default class ImpactStatsSection extends React.Component {
     render() {
         return (
-            <SectionContainer >
+            <div className="centred-container">
                 <div className="container">
-                    <SectionHeadingContainer>
-                        <h2>Our impact</h2>
-                    </SectionHeadingContainer>
-                    <StatsContainer>
-                        <StatsColumn>
+                    <h2>Our impact</h2>
+                    <div className="flex-grid">
+                        <div className="flex-container" style={{minWidth: "250px"}}>
                             <h1 ><CountUp end={983} separator="," redraw={true}>
                                 {({ countUpRef, start }) => (
                                     <VisibilitySensor onChange={start} delayedCall>
@@ -28,9 +17,9 @@ export default class ImpactSection extends React.Component {
                                     </VisibilitySensor>
                                 )}
                             </CountUp></h1>
-                            <h3 className="legend-header">Donations</h3>
-                        </StatsColumn>
-                        <StatsColumn>
+                            <h3 className="font-weight-normal">Donations</h3>
+                        </div>
+                        <div className="flex-container" style={{minWidth: "250px"}}>
                             <h1><CountUp end={18652} separator="," redraw={true}>
                             {({ countUpRef, start }) => (
                                     <VisibilitySensor onChange={start} delayedCall>
@@ -38,9 +27,9 @@ export default class ImpactSection extends React.Component {
                                     </VisibilitySensor>
                                 )}
                             </CountUp></h1>
-                            <h3 className="legend-header">Meals Served</h3>
-                        </StatsColumn>
-                        <StatsColumn>
+                            <h3 className="font-weight-normal">Meals Served</h3>
+                        </div>
+                        <div className="flex-container" style={{minWidth: "250px"}}>
                             <h1><CountUp end={163985} separator="," redraw={true} prefix="$">
                             {({ countUpRef, start }) => (
                                     <VisibilitySensor onChange={start} delayedCall>
@@ -48,21 +37,13 @@ export default class ImpactSection extends React.Component {
                                     </VisibilitySensor>
                                 )}
                             </CountUp></h1>
-                            <h3 className="legend-header">Funds Raised</h3>
-                        </StatsColumn>
-                    </StatsContainer>
-                    <p>We are active across in <em>3 states</em>, providing for <em>19 hospitals</em> with <em>#PLACEHOLDER NUMBER# restaurants</em> on board.</p>
-                    <DonationButtonContainer>
-                        <DonationButton>
-                            <a href="/donation">
-                                <ButtonText>
-                                    Get involved
-                                </ButtonText>
-                            </a>
-                        </DonationButton>
-                    </DonationButtonContainer>
+                            <h3 className="font-weight-normal">Funds Raised</h3>
+                        </div>
+                    </div>
+                    <p>We are active across in <em>3 states</em>, providing for <em>19 hospitals</em> with <em>11 restaurants</em> on board.</p>
+                    <a href="/donation"><h5>Get involved</h5></a>
                 </div>
-            </SectionContainer >
+            </div>
         )
     }
 }

@@ -20,13 +20,6 @@ app.post('/api/form', (req, res) => {
         `
 
         let transporter = nodemailer.createTransport({
-            // host: 'smtp.gmail.com',
-            // port: 587,
-            // auth: {
-            //     user: '',
-            //     pass: '' 
-            //     // this is the actual password so hide this in a separate file
-            // }
             host: 'smtp.ethereal.email',
             port: 587,
             auth: {
@@ -39,7 +32,6 @@ app.post('/api/form', (req, res) => {
             from: req.body.email,
             replyTo: req.body.email,
             to: 'amber.lebsack@ethereal.email',
-//            to: 'info@alexmakesmeals.com',
             subject: 'Partnership Inquiry from Alex Makes Meals Website',
             text: req.body.message,
             html: htmlEmail
