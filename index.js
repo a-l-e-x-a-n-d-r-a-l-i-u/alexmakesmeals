@@ -14,6 +14,7 @@ app.post('/api/form', (req, res) => {
             <li>Name: ${req.body.name}</li>
             <li>Phone: ${req.body.phone}</li>
             <li>Email: ${req.body.email}</li>
+            <li>Organisation: ${req.body.org}</li>
             </ul>
             <h3>Message:</h3>
             <p>${req.body.message}</p>
@@ -46,13 +47,13 @@ app.post('/api/form', (req, res) => {
     })
 })
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-    const path = require('path');
-    app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-    });
-  }
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static('client/build'));
+//     const path = require('path');
+//     app.get('*', (req, res) => {
+//       res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+//     });
+//   }
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
