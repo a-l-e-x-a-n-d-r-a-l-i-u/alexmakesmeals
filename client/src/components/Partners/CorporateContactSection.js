@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import SingleInput from '../../form-elements/SingleInput.js';
-import TextArea from '../../form-elements/TextArea.js';
+import FormCard from '../Contact/FormCard.js'
 
 export default class CorporateContactSection extends React.Component {
     constructor() {
@@ -10,7 +9,9 @@ export default class CorporateContactSection extends React.Component {
             name: '',
             phone: '',
             email: '',
+            org: '',
             message: '',
+            subject: 'Partnership Inquiry from Alex Makes Meals Website'
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,12 +23,14 @@ export default class CorporateContactSection extends React.Component {
 
     async handleSubmit(e) {
         e.preventDefault()
-        const { name, phone, email, message } = this.state;
+        const { name, phone, email, org, message, subject } = this.state;
         const form = await axios.post('/api/form', {
             name,
             phone,
             email,
-            message
+            org,
+            message,
+            subject
         })
     }
 
@@ -45,15 +48,7 @@ export default class CorporateContactSection extends React.Component {
                         </div>
                     </div>
                     <div className="flex-container">
-                        <div className="form-wrapper">
-                            <form onSubmit={this.handleSubmit}>
-                                <SingleInput name="name" placeholder="Full Name" controlFunc={this.handleChange} required />
-                                <SingleInput name="phone" placeholder="Phone" controlFunc={this.handleChange} required />
-                                <SingleInput name="email" placeholder="Email Address" controlFunc={this.handleChange} required />
-                                <TextArea name="message" placeholder="Message" controlFunc={this.handleChange} required />
-                                <input type="submit" value="Send" />
-                            </form>
-                        </div>
+                        <FormCard />
                     </div>
                 </div>
             </div>

@@ -32,7 +32,7 @@ app.post('/api/form', (req, res) => {
             from: req.body.email,
             replyTo: req.body.email,
             to: 'info@alexmakesmeals.com',
-            subject: 'Partnership Inquiry from Alex Makes Meals Website',
+            subject: req.body.subject,
             text: req.body.message,
             html: htmlEmail
         }

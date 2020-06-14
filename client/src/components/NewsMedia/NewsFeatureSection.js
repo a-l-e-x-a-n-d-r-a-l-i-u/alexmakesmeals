@@ -1,5 +1,5 @@
 import React from 'react';
-import publications from '../../../publications.js';
+import publications from './publications_array.js';
 
 export default class NewsFeatureSection extends React.Component {
     render() {

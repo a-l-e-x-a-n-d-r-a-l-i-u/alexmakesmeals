@@ -1,21 +1,11 @@
 import React from 'react';
-
-import dareLogo from '../../../images/sponsorship/Dare.png';
-import lionLogo from '../../../images/sponsorship/Lion.jpg';
-import hardwareClubLogo from '../../../images/sponsorship/Hardware-Club.jpg';
-import toyotaLogo from '../../../images/sponsorship/Toyota.png';
+import partners from './partners_array.js'
 
 
 export default class ThankYouSponsorsSection extends React.Component {
     render() {
-        const sponsors = [
-            { name: 'Dare', logo: dareLogo },
-            { name: 'The Hardware Club', logo: hardwareClubLogo },
-            { name: 'Lion', logo: lionLogo },
-            { name: 'Toyota', logo: toyotaLogo },
-        ];
 
-        let sponsorMarkup = sponsors.map((company) => (
+        let sponsorMarkup = partners.map((company) => (
             <a className="link-out" href="/partners">
             <div className="flex-container">
               <img className="logos" src={company.logo} alt={`Logo of ${company.name}`} />

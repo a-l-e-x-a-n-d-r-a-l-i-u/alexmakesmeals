@@ -1,21 +1,20 @@
 make countup animatiom run once
 https://stackoverflow.com/questions/51044090/react-countup-animation-starts-immediately-after-the-page-loading-should-start
 
+make green button around links
+
+box around each news item + grey on hover
+
 navbar:
 hamburger / responsive
+navbar items to right
 
 compression:
 change every png to jpeg
 change dimensions & 72dpi of pictures
 
 message box:
-test that is works.
-form should automate sending the message
 send shou1d hover dark green + larger text
-
-fix footer spacing
+confirmation
 
 change favicon
-
-nice light green
-#CFFFB3

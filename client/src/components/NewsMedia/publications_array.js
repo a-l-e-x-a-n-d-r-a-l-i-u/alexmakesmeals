@@ -1,6 +1,6 @@
-import sunriseLogo from './images/publications/sunrise.png';
-import independentLogo from './images/publications/independent.png';
-import theAgeLogo from './images/publications/the-age.png';
+import sunriseLogo from '../../images/publications/sunrise.png';
+import independentLogo from '../../images/publications/independent.png';
+import theAgeLogo from '../../images/publications/the-age.png';
 
 const publications = [
     { key: 1, title: 'The Uni Student Making Healthy Meals For Our Health Workers', publisher: 'Independent', logo: independentLogo, date: 'Apr 5 2020', url: 'https://10play.com.au/theproject/exclusives/2019/the-uni-student-making-healthy-meals-for-our-health-workers/tpv200405dlrwc' },
