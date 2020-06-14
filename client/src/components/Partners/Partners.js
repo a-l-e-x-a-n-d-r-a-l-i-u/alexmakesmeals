@@ -21,7 +21,7 @@ class PartnerSignUp extends React.Component {
 	render() {
 		return (<div className="centred-container">
 			<h2>Tell us about yourself and why you’d love to partner!</h2>
-			<FormCard />
+			<FormCard subjectTitle={'Partnership'} />
 		</div >)
 	}
 }

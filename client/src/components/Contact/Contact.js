@@ -1,37 +1,7 @@
 import React from 'react';
-import axios from 'axios';
 import FormCard from './FormCard.js'
 
-class PersonalContactSection extends React.Component {
-	constructor() {
-		super()
-		this.state = {
-			name: '',
-			phone: '',
-			email: '',
-			org: '',
-			message: '',
-			subject: 'Contact Inquiry from Alex Makes Meals Website'
-		}
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
-	}
-
-	handleChange(e) {
-		this.setState({ [e.target.name]: e.target.value })
-	}
-
-	async handleSubmit(e) {
-		e.preventDefault()
-		const { name, phone, email, message, subject } = this.state;
-		const form = await axios.post('/api/form', {
-			name,
-			phone,
-			email,
-			message,
-			subject
-		})
-	}
+class GeneralContactSection extends React.Component {
 	render() {
 		return (
 			<div className="centred-container">
@@ -46,7 +16,7 @@ class PersonalContactSection extends React.Component {
 						</div>
 					</div>
 					<div className="flex-container">
-						<FormCard />
+						<FormCard subjectTitle={'General'} />
 					</div>
 				</div>
 			</div>
@@ -57,7 +27,7 @@ class PersonalContactSection extends React.Component {
 
 const Contact = () => {
 	return (<>
-		<section className="alternate-bg-2"><PersonalContactSection /></section>
+		<section className="alternate-bg-2"><GeneralContactSection /></section>
 		<section className="plain-bg">
 			<h4>For all media inquiries or interview requests, please contact Pete Dillon at Scoffer Consulting on 0409 142 365 or <a href="mailto:pdillon@scoffer.com.au">pdillon@scoffer.com.au</a>.</h4>
 		</section>

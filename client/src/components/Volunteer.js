@@ -1,37 +1,8 @@
 import React from 'react';
-import axios from 'axios';
 import FormCard from './Contact/FormCard.js'
 
 class VolunteerContactSection extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            name: '',
-            phone: '',
-            email: '',
-			org: '',
-            message: '',
-            subject: 'Volunteer Inquiry from Alex Makes Meals Website'
-        }
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
 
-    handleChange(e) {
-        this.setState({ [e.target.name]: e.target.value })
-    }
-
-    async handleSubmit(e) {
-        e.preventDefault()
-        const { name, phone, email, message, subject } = this.state;
-        const form = await axios.post('/api/form', {
-            name,
-            phone,
-            email,
-            message,
-            subject
-        })
-    }
     render() {
         return (
             <div className="centred-container">
@@ -51,7 +22,7 @@ class VolunteerContactSection extends React.Component {
                         </div>
                     </div>
                     <div className="flex-container">
-                        <FormCard />
+                    <FormCard subjectTitle={'Volunteer'} />
                     </div>
                 </div>
             </div>
