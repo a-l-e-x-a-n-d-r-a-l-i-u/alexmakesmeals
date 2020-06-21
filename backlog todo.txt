@@ -5,9 +5,13 @@ make green button around links
 
 box around each news item + grey on hover
 
+news page:
+layout could be better...
+pete dillon section centred-container
+tiny white line below footer section?
+
 navbar:
 hamburger / responsive
-navbar items to right
 
 compression:
 change every png to jpeg
