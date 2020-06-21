@@ -5,6 +5,7 @@ import mojoNewsLogo from '../../images/publications/mojo-news.jpg';
 import ABCLogo from '../../images/publications/abc.svg';
 import SBSLogo from '../../images/publications/sbs.svg';
 import whereToLogo from '../../images/publications/where-to.jpg';
+import buzzfeedLogo from '../../images/publications/buzzfeed.png';
 import redRoosterLogo from '../../images/publications/red-rooster.svg';
 
 const publications = [
@@ -38,7 +39,7 @@ const publications = [
     },
     {
         key: 8, title: 'If You’re In The Mood For Some Good News, Here Are 12 Local Stories For You',
-        publisher: 'Where To', logo: whereToLogo, date: 'Apr 17 2020', url: 'https://www.buzzfeed.com/marielasummerhays01/feel-good-australian-stories-coronavirus?origin=web-hf'
+        publisher: 'Buzzfeed', logo: buzzfeedLogo, date: 'Apr 17 2020', url: 'https://www.buzzfeed.com/marielasummerhays01/feel-good-australian-stories-coronavirus?origin=web-hf'
     },
     {
         key: 9, title: 'Red Rooster helps Alex Makes Meals deliver food to healthcare workers',
