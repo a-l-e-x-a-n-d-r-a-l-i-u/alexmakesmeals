@@ -317,7 +317,6 @@ ul.nav-header li img {
   border: 5px solid #ffffff;
 }
 
-
 .nav-link-cta {
   float: right;
   padding: 0 .5em;
@@ -356,17 +355,21 @@ blockquote {
   width: 400px;
 }
 
-/* Extra Accomodations for News Features Section */
+/* Extra Accomodations for News Features Section & For NavBar */
 @media screen and (max-width: 1600px) {
   #news-features {
     flex-direction: column;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-   }
+  }
 }
 
-  /* Medium to Large */
+/* Medium to Large */
 @media screen and (min-width: 991px) {
+  .mobile-only {
+    display: none
+  }
+
   h1 {
     font-size: 4rem;
     line-height: 4.2rem
@@ -405,6 +408,14 @@ blockquote {
 
 /* SM */
 @media screen and (min-width:620px) and (max-width:990px) {
+  .mobile-only {
+    display: none
+  }
+  
+  ul.nav-header li {
+    padding: 0px 26px 3px 0px
+  }
+
   h1 {
     font-size: 4;
     line-height: 4.2rem;
@@ -462,6 +473,41 @@ blockquote {
 
 /* XS */
 @media screen and (max-width:619.9px) {
+  .hide-in-mobile {
+    display: none
+  }
+
+  button#hamburger {
+    font-size: 40px;
+    margin: 13px 7px 0 0;
+    color: black;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    float: right;
+  }
+
+  .home-icon {
+    line-height: 1;
+    padding: 12px 0 0 7px;
+    font-size: 6;
+  }
+
+  ul.nav-header {
+    padding: 0px 6px 0px 0px;
+    height: 0;
+    overflow: hidden;
+    line-height: 1;
+  }
+
+  ul.nav-header.show-nav {
+    height: auto;
+}
+
+ul.nav-header li {
+  padding: 0px 6px 3px 0px;
+}
   h1 {
     font-size: 2rem;
     line-height: 2rem;
