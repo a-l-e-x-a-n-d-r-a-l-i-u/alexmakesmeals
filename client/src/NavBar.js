@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
@@ -30,6 +31,11 @@ const Logo = styled.img`
   height: 70px;
   padding-top: 0.2em;
 `
+=======
+import { FaAlignRight } from 'react-icons/fa';
+import styled from 'styled-components';
+import logo from './images/logo.png';
+>>>>>>> production
 
 export const DonationButton = styled.div`
     background-color: #7AC143;
@@ -47,10 +53,20 @@ export const ButtonText = styled.h5`
 `
 
 export default class NavBar extends React.Component {
+<<<<<<< HEAD
+=======
+  state = {
+    toggle: false
+  }
+  Toggle = () => {
+    this.setState({ toggle: !this.state.toggle })
+  }
+>>>>>>> production
   render() {
     let navMarkup = this.props.pages.map((page, index) => {
       let navLinkMarkup = page.priority ? (
         <DonationButton>
+<<<<<<< HEAD
                             <a href="https://donorbox.org/donate-a-meal">
                                 <ButtonText>
                                   {page.label}
@@ -80,3 +96,32 @@ export default class NavBar extends React.Component {
     </StyledNav>
   }
 }
+=======
+          <a href="https://donorbox.org/donate-a-meal">
+            <ButtonText>
+              {page.label}
+            </ButtonText>
+          </a>
+        </DonationButton>
+      ) : (
+          <div className='nav-link'><h5><a href={page.page}>{page.label}</a></h5></div>
+        );
+
+      return (<>
+        <li key={index} className='nav-list-item'>
+          {navLinkMarkup}
+        </li>
+      </>)
+    });
+
+    return <nav>
+      <a href="/" className="mobile-only"><img className="home-icon" src={logo} width="45px" alt="Alex Makes Meals logo" /></a>
+      <button id="hamburger" className="mobile-only" onClick={this.Toggle}><FaAlignRight /></button>
+      <ul className={this.state.toggle ? "nav-header show-nav" : "nav-header"}>
+        <li className="hide-in-mobile"><a href="/"><img src={logo} width="45px" alt="Alex Makes Meals logo" /></a></li>
+        {navMarkup}
+      </ul>
+    </nav>
+  }
+}
+>>>>>>> production

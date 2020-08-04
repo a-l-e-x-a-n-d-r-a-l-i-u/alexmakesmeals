@@ -1,27 +1,7 @@
-## To update the website
+# How to use this repo #
 
-You need to install either `node package manager` or `yarn` to make changes.
+* This repo has a very thin layer of backend, but it's mosty frontend (in the folder named `client`).
 
-Firstly, make a copy of this repository from Git or download as a zip folder and unzip it
+* The easiest way to catch up to speed on component structure would be through `client / src / App.js` as the website navigation is defined in the section `<BrowserRouter />`.
 
-In the folder where you have your local copy of these files, open command line and enter:
-
-### npm i --save
-
-Then, open the file `App.js` in a text editor.
-
-In the section of the file titled `Changeable Variables`, make edits as necessary.
-
-To view your edits in progress, open command line and enter
-
-### npm start
-
-This will be what your website looks like.
-
-If you are happy with the changes, enter
-
-### npm run build
-
-This will create a folder called `build`. To publish the new website, upload all contents of `build` folder onto your server.
-
-Voila!
+* Feel free to use the branches `dev` and `master` for development. When the changes are ready to be published, push it to the `production` branch and the alexmakesmeals.com website will automatically update with your changes. The changes pushed to production should be immediately visible but please do give up to 10-15 minutes to see changes being reflected in the website.

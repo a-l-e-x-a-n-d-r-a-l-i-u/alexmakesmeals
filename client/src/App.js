@@ -5,9 +5,9 @@ import FooterSection from './FooterSection.js';
 
 import Home from './components/Home/Home.js';
 import About from './components/About.js';
-import Partners from './components/Partners.js';
+import Partners from './components/Partners/Partners.js';
 import News from './components/News.js';
-import Contact from './components/Contact.js';
+import Contact from './components/Contact/Contact.js';
 import Volunteer from './components/Volunteer.js';
 import Donate from './components/Donate.js';
 import Error from './components/Error.js';

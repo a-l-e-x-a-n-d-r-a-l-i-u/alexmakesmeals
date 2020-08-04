@@ -4,7 +4,7 @@ import Team from '../images/photos/Team.JPG'
 const TeamBg = { backgroundImage: 'url(' + Team + ')' };
 
 const PlainPicture = () => {
-return (<div className="large"></div>)
+	return (<div className="large"></div>)
 }
 
 const AboutUsSection = () => {
@@ -24,7 +24,7 @@ const AboutAlexDekkerSection = () => {
 		<h2>Meet Alex</h2>
 		<div className="text-content">
 			<div className="flex-grid">
-				<div className="flex-container"><img className="profile-pic" src={KaelanProfile} /></div>
+				<div className="flex-container"><img className="profile-pic" src={KaelanProfile} alt="Alex Dekker, Founder of Alex Makes Meals" /></div>
 				<div className="flex-container">
 					<p>Alex Dekker is a 20-year-old Monash University student, currently studying a double degree in International Relations and Science.</p>
 					<p>When the outbreak of the COVID-19 began, Alex’s life changed dramatically. He was unable to visit his parents, as they were immunocompromised and has a history of pneumonia. His sister, who was the inspiration for the charity, is on placement at the emergency department at Monash Medical Hospital.</p>
@@ -47,7 +47,7 @@ const FutureDirectionSection = () => {
 
 const About = () => {
 	return (<>
-	<section className="has-bg-img" style={TeamBg}><PlainPicture /></section>
+		<section className="has-bg-img" style={TeamBg}><PlainPicture /></section>
 		<section className="plain-bg"><AboutUsSection /></section>
 		<section className="alternate-bg-2"><AboutAlexDekkerSection /></section>
 		<section className="plain-bg"><FutureDirectionSection /></section>	</>)
