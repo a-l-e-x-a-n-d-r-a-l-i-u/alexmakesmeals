@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
@@ -43,8 +44,8 @@ app.post('/api/form', (req, res) => {
             host: 'smtp.gmail.com',
             port: 587,
             auth: {
-                user: 'info@alexmakesmeals.com',
-                pass: 'C0ronavirality1422'
+                user: process.env.AMM_EMAIL,
+                pass: process.env.AMM_PASS
             } 
             // hide authentication
 >>>>>>> production
