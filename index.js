@@ -1,7 +1,9 @@
 require('dotenv').config()
 const env = process.env.NODE_ENV.toUpperCase();
-var emailUser = process.env['process.env.AMM_EMAIL_' + env];
-var emailPass = process.env['process.env.AMM_PASS_' + env];
+const {
+    [`AMM_EMAIL_${env}`]: emailUser,
+    [`AMM_PASS_${env}`]: emailPass
+} = process.env;
 
 const express = require('express')
 const bodyParser = require('body-parser')
